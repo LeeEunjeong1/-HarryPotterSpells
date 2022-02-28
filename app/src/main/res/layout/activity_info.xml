@@ -17,7 +17,7 @@
             android:id="@+id/spell_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="abracadabara"
+            android:text="Accio"
             android:textSize="30sp"
             android:layout_gravity="center"
             android:textColor="@color/white"
@@ -27,7 +27,8 @@
             android:id="@+id/spell_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="this is harrypotter's spell. welcome to hogwart."
+            android:text="Stops someone from talking (by sticking one's tongue to the roof of his/her mouth)"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:fontFamily="@font/lumos_latino"
             android:layout_gravity="center"/>
