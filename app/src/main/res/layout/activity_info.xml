@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:text="this is harrypotter's spell. welcome to hogwart."
             android:textColor="@color/white"
+            android:fontFamily="@font/lumos_latino"
             android:layout_gravity="center"/>
     </LinearLayout>
 
