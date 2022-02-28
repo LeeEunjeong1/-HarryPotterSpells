@@ -15,6 +15,37 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="90dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@id/logo">
+
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="abracadhghabra"
+            android:textColor="@color/white"
+            android:autofillHints="What spell would you like to know?"
+            android:imeOptions="actionSearch"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:background="@drawable/btn_search"
+            android:scaleType="fitCenter"
+            android:contentDescription="TODO" />
+
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

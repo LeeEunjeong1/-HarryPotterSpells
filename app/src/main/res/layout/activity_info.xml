@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="150dp">
+        <TextView
+            android:id="@+id/spell_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abracadabara"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lumos_latino"
+            android:layout_marginBottom="50dp"/>
+        <TextView
+            android:id="@+id/spell_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="this is harrypotter's spell. welcome to hogwart."
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
