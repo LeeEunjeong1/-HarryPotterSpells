@@ -2,7 +2,7 @@
 ### 개발 기간
 - 2022.02.27 ~ 개발중
 ### 스택
-- language - Kotlin
+- Language - Kotlin
 - Network - Retrofit,OkHttp
 - Di - Koin
 - AAC(ViewModel, LiveData...)
