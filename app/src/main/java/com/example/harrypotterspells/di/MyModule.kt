@@ -3,6 +3,7 @@ package com.example.harrypotterspells.di
 import com.example.harrypotterspells.model.DataModel
 import com.example.harrypotterspells.model.DataModelImpl
 import com.example.harrypotterspells.model.SpellService
+import com.example.harrypotterspells.ui.MainAdapter
 import com.example.harrypotterspells.viewmodel.MainViewModel
 import com.orhanobut.logger.Logger
 import okhttp3.OkHttpClient
@@ -44,7 +45,7 @@ var viewModelPart = module {
 
 var adapterPart = module {
     factory {
-      //  MainSearchRecyclerViewAdapter()
+        MainAdapter()
     }
 }
 /* 모듈 하나로 묶기 -> 쉽고 편하게 모듈 호출 가능(startKoin) */
