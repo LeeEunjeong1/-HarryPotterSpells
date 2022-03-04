@@ -21,9 +21,9 @@
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="90dp"
+            android:layout_marginEnd="70dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@id/logo"
             app:layout_constraintTop_toBottomOf="@+id/logo"
@@ -34,17 +34,19 @@
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:autofillHints="What spell would you like to know?"
+                android:hint =  "Enter a spell"
                 android:inputType="text"
                 android:imeOptions="actionSearch"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/search_btn"
-                android:layout_width="40dp"
+                android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
-                android:background="@drawable/btn_search"
-                android:scaleType="fitCenter"
+                android:src="@drawable/btn_search"
+                android:padding="0sp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
                 android:contentDescription="TODO" />
 
 
