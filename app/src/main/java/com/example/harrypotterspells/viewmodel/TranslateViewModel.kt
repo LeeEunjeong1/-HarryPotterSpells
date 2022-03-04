@@ -19,7 +19,7 @@ class TranslateViewModel(private  val model: TransferModel) : ViewModel() {
 
     fun translate(source:String, target: String, text: String) {
         //source -> target(결과)
-        model.transfer("NkPZFF4nYHnmzDWyBP9e","kIL3gjxskk",source,target,text)
+        model.transfer("blahblah","blahblah",source,target,text)
             .subscribeOn(Schedulers.io())
             .subscribe({
                 it.run {
