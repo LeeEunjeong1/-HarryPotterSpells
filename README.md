@@ -19,3 +19,6 @@ https://developers.naver.com
 
 ### 주문 설명 & 번역
 ![2](https://user-images.githubusercontent.com/38210019/156733924-c0d6cf91-ab7b-4b72-acba-300c58f61a0c.gif)
+
+### Download App
+https://github.com/LeeEunjeong1/HarryPotterSpells/tree/master/app/release
