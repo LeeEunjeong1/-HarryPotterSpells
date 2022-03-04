@@ -2,6 +2,7 @@ package com.example.harrypotterspells.ui
 
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -14,7 +15,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
     data class Spells(var spell: String)
 
-    private val spellsList = ArrayList<Spells>()
+    private var spellsList = ArrayList<Spells>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val binding = ItemSpellBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -32,7 +33,9 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
     }
     fun setList(spell: String) {
         spellsList.add(Spells(spell))
+        notifyDataSetChanged()
     }
+
 
 
     class MainViewHolder(private val binding: ItemSpellBinding) : RecyclerView.ViewHolder(binding.root) {
