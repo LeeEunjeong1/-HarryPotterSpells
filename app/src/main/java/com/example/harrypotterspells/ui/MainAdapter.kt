@@ -1,19 +1,14 @@
 package com.example.harrypotterspells.ui
 
 import android.content.Intent
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.harrypotterspells.databinding.ItemSpellBinding
 
-
 class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
-    data class Spells(var spell: String)
+    data class Spells(var spell: String, var use: String)
 
     private var spellsList = ArrayList<Spells>()
 
@@ -31,8 +26,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
     fun  clearList(){
         spellsList.clear()
     }
-    fun setList(spell: String) {
-        spellsList.add(Spells(spell))
+    fun setList(spell: String, use: String) {
+        spellsList.add(Spells(spell,use))
         notifyDataSetChanged()
     }
 
@@ -42,6 +37,13 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
         fun onBind(item: Spells) {
             with(binding){
                 name.text = item.spell
+                itemView.setOnClickListener {
+                    val intent = Intent(it.context, InfoActivity::class.java)
+
+                    intent.putExtra("name", item.spell)
+                    intent.putExtra("use", item.use)
+                    it.context.startActivity(intent)
+                }
             }
         }
     }

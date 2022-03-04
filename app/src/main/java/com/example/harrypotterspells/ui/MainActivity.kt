@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getSpellResponseLiveData.observe(this) {
             Log.d("here? : ",it.toString())
             it.forEach{ spellResponse ->
-                recyclerviewAdapter.setList(spellResponse.spell)
+                recyclerviewAdapter.setList(spellResponse.spell,spellResponse.use)
             }
         }
     }
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 if (filteredList.isNotEmpty()) {
                     recyclerviewAdapter.clearList()
                     filteredList.forEach { spells ->
-                        recyclerviewAdapter.setList(spells.spell)
+                        recyclerviewAdapter.setList(spells.spell,spells.use)
                     }
                 } else {
                     Toast.makeText(
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 recyclerviewAdapter.clearList()
                 it.forEach{ spellResponse ->
-                    recyclerviewAdapter.setList(spellResponse.spell)
+                    recyclerviewAdapter.setList(spellResponse.spell,spellResponse.use)
                 }
             }
         }

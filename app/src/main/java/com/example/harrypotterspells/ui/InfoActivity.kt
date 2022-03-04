@@ -12,5 +12,11 @@ class InfoActivity : AppCompatActivity() {
         binding = ActivityInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val secondIntent = intent
+        val spell = secondIntent.getStringExtra("name")!!
+        val use = secondIntent.getStringExtra("use")!!
+        binding.spellName.text = spell
+        binding.spellInfo.text = use
+
     }
 }
