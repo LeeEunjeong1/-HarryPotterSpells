@@ -1,12 +1,12 @@
 ## ⚡해리포터  주문서⚡
 ### 개발 기간
 - 2022.02.27 ~ 2022.03.04
-### 스택
-- Language - Kotlin
-- Network - Retrofit,OkHttp
-- Di - Koin
-- AAC(ViewModel, LiveData...)
-- Android Jetpack(ViewBinding, RecyclerView...)
+### 기술스택 & 라이브러리
+- IDE -> Android Studio
+- Language -> Kotlin
+- Network -> Retrofit,OkHttp
+- Dependency injection -> Koin
+- Android Jetpack(ViewModel, LiveData, dataBinding, RecyclerView)
 ### 사용 API
 -  해리포터 주문 목록 API
 https://github.com/fedeperin/harry-potter-api-english
@@ -20,5 +20,5 @@ https://developers.naver.com
 ### 주문 설명 & 번역
 ![2](https://user-images.githubusercontent.com/38210019/156733924-c0d6cf91-ab7b-4b72-acba-300c58f61a0c.gif)
 
-### Download App
+### 앱 다운로드
 https://github.com/LeeEunjeong1/HarryPotterSpells/tree/master/app/release
