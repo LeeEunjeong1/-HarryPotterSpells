@@ -13,3 +13,9 @@ https://github.com/fedeperin/harry-potter-api-english
 
 - 네이버 오픈 API (Papago  번역)
 https://developers.naver.com
+
+### 주문 목록 & 검색
+![1](https://user-images.githubusercontent.com/38210019/156733920-c88d0992-64bc-4299-9998-1772f8aa9f66.gif)
+
+### 주문 설명 & 번역
+![2](https://user-images.githubusercontent.com/38210019/156733924-c0d6cf91-ab7b-4b72-acba-300c58f61a0c.gif)
