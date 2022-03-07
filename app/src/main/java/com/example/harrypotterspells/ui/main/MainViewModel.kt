@@ -22,7 +22,7 @@ class MainViewModel(private  val model: DataModel) : ViewModel() {
     fun getSpells() {
         try{
             model.getData()
-                .subscribeOn(Schedulers.io())
+                .subscribeOn(Schedulers.io()) // [첫번째 스트림 ~ observeOn 호출 전 까지의 스트림]의 쓰레드를 지정
                 .subscribe({
                     it.run {
                         Log.d( "MainViewModel","spells : $it")
