@@ -24,13 +24,25 @@ val httpLoggingInterceptor = HttpLoggingInterceptor()
 
 //해리포터api
 var retrofitPart = module {
+    httpLoggingInterceptor.apply {
+        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+    }
     single<SpellService> {
         Retrofit.Builder()
             .baseUrl("https://fedeperin-harry-potter-api-en.herokuapp.com/")
+            .client(get<OkHttpClient>((named("log"))))
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(SpellService::class.java)
+    }
+    single<OkHttpClient>(named("log"))  {
+        OkHttpClient.Builder()
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .addInterceptor(httpLoggingInterceptor)
+            .build()
     }
 }
 
@@ -42,6 +54,7 @@ var retrofitNaverPart = module{
     single<PapagoService>{
         Retrofit.Builder()
             .baseUrl("https://openapi.naver.com/")
+            .client(get<OkHttpClient>((named("retrofitNaverPart"))))
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -56,8 +69,8 @@ var retrofitNaverPart = module{
             .addInterceptor { chain ->
                 val originalRequest = chain.request()
                 val builder = originalRequest.newBuilder()
-                    .header("X-Naver-Client-Id","NkPZFF4nYHnmzDWyBP9e")
-                    .header("X-Naver-Client-Secret","kIL3gjxskk")
+                    .header("X-Naver-Client-Id","blah")
+                    .header("X-Naver-Client-Secret","blah")
                 val newRequest = builder.build()
                 chain.proceed(newRequest)
             }

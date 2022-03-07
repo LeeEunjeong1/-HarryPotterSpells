@@ -4,9 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.harrypotterspells.model.DataModel
-import com.example.harrypotterspells.model.ResultTransferPapago
-import com.example.harrypotterspells.model.SpellResponse
 import com.example.harrypotterspells.model.TransferModel
 import io.reactivex.rxjava3.schedulers.Schedulers
 
@@ -19,7 +16,7 @@ class TranslateViewModel(private  val model: TransferModel) : ViewModel() {
 
     fun translate(source:String, target: String, text: String) {
         //source -> target(결과)
-        model.transfer("blahblah","blahblah",source,target,text)
+        model.transfer(source,target,text)
             .subscribeOn(Schedulers.io())
             .subscribe({
                 it.run {
