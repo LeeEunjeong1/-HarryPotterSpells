@@ -1,6 +1,5 @@
-package com.example.harrypotterspells.ui
+package com.example.harrypotterspells.ui.main
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

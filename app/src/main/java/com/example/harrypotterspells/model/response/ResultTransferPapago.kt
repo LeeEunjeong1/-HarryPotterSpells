@@ -1,4 +1,4 @@
-package com.example.harrypotterspells.model
+package com.example.harrypotterspells.model.response
 
 data class ResultTransferPapago (
     var message: Message

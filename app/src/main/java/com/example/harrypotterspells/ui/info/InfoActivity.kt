@@ -1,12 +1,10 @@
-package com.example.harrypotterspells.ui
+package com.example.harrypotterspells.ui.info
 
-import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.harrypotterspells.R
 import com.example.harrypotterspells.databinding.ActivityInfoBinding
-import com.example.harrypotterspells.viewmodel.MainViewModel
-import com.example.harrypotterspells.viewmodel.TranslateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class InfoActivity : AppCompatActivity() {
@@ -49,6 +47,9 @@ class InfoActivity : AppCompatActivity() {
         viewModel.translateData.observe(this) {
             binding.spellInfo.text = it
             binding.spellInfo.typeface = resources.getFont(R.font.safi)
+        }
+        viewModel.isError.observe(this){
+            Toast.makeText(applicationContext,it,Toast.LENGTH_LONG).show()
         }
     }
 

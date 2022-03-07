@@ -1,15 +1,14 @@
-package com.example.harrypotterspells.ui
+package com.example.harrypotterspells.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.harrypotterspells.databinding.ActivityMainBinding
-import com.example.harrypotterspells.viewmodel.MainViewModel
 import android.util.Log
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
-import com.example.harrypotterspells.model.SpellResponse
+import com.example.harrypotterspells.model.response.SpellResponse
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -60,6 +59,9 @@ class MainActivity : AppCompatActivity() {
             it.forEach{ spellResponse ->
                 recyclerviewAdapter.setList(spellResponse.spell,spellResponse.use)
             }
+        }
+        viewModel.isError.observe(this){
+            Toast.makeText(applicationContext,it,Toast.LENGTH_LONG).show()
         }
     }
 

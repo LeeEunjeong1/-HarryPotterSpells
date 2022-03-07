@@ -1,4 +1,4 @@
-package com.example.harrypotterspells.ui
+package com.example.harrypotterspells.ui.info
 
 import android.annotation.SuppressLint
 import android.os.Bundle
