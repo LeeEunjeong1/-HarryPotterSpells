@@ -29,6 +29,7 @@ class TranslateViewModel(private  val model: TransferModel) : ViewModel() {
                         _translateData.postValue(it.message.result.translatedText)
                     }
                 }, {
+                    _isError.postValue(it.message)
                     Log.d("TranslateViewModel", "response error, message : ${it.message}")
                 })
         }catch (e:Exception){

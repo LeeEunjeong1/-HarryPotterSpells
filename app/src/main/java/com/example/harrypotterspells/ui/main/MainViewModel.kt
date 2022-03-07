@@ -29,6 +29,7 @@ class MainViewModel(private  val model: DataModel) : ViewModel() {
                         _getSpellResponseLiveData.postValue(it)
                     }
                 }, {
+                    _isError.postValue(it.message)
                     Log.d("MainViewModel", "response error, message : ${it.message}")
                 })
         }catch (e:Exception){
