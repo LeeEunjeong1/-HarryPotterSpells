@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HarryPotter Spells</string>
+    <string name="enter_a_spell">Enter a spell</string>
+    <string name="no_spell">we don\'t have that spell!</string>
 </resources>
